@@ -1,0 +1,5 @@
+comment first_comment = collect_data("google/material-design-icons", "1", "59602805");
+print(first_comment.body);
+
+commit commit1 = collect_data("google/material-design-icons", "e24770a0300367966b3440d72013816adf98e79f");
+print(commit1);

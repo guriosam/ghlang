@@ -8,54 +8,40 @@ import interfaces.GHType;
 
 public class Comments implements GHList, GHType {
 
-	public List<Comment> comments;
-
-	public Comments() {
-		this.comments = new ArrayList<>();
-	}
+	public List<Comment> elements = new ArrayList<>();
 
 	@Override
 	public int size() {
-		return comments.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof Comment) {
-			comments.add((Comment) obj);
+			elements.add((Comment) obj);
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof Comment) {
-			if (comments.contains(obj)) {
-				comments.remove((Comment) obj);
+			if (elements.contains(obj)) {
+				elements.remove((Comment) obj);
+				return true;
 			}
 		}
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
 		if (obj instanceof Comment) {
-			return comments.contains(obj);
+			return elements.contains(obj);
 		}
 
 		return false;
-	}
-
-	public List<Comment> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return comments;
-	}
-
-	public List<Comment> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return comments;
 	}
 
 	@Override
@@ -65,8 +51,32 @@ public class Comments implements GHList, GHType {
 
 	@Override
 	public String toString() {
-		return "Comments [comments=" + comments + "]";
+		return "Comments [comments=" + elements + "]";
 	}
-	
-	
+
+	@Override
+	public void reverse() {
+
+	}
+
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new Comment();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof Comment) {
+			elements.add(index, (Comment) element);
+			return true;
+		}
+
+		return false;
+
+	}
+
 }

@@ -1,0 +1,31 @@
+{
+  "url": "https://api.github.com/repos/google/material-design-icons/issues/comments/59602805",
+  "html_url": "https://github.com/google/material-design-icons/issues/1#issuecomment-59602805",
+  "issue_url": "https://api.github.com/repos/google/material-design-icons/issues/1",
+  "id": 59602805,
+  "node_id": "MDEyOklzc3VlQ29tbWVudDU5NjAyODA1",
+  "user": {
+    "login": "tomByrer",
+    "id": 1308419,
+    "node_id": "MDQ6VXNlcjEzMDg0MTk=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/1308419?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tomByrer",
+    "html_url": "https://github.com/tomByrer",
+    "followers_url": "https://api.github.com/users/tomByrer/followers",
+    "following_url": "https://api.github.com/users/tomByrer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tomByrer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tomByrer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tomByrer/subscriptions",
+    "organizations_url": "https://api.github.com/users/tomByrer/orgs",
+    "repos_url": "https://api.github.com/users/tomByrer/repos",
+    "events_url": "https://api.github.com/users/tomByrer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tomByrer/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created_at": "2014-10-18T08:01:11Z",
+  "updated_at": "2014-10-19T00:34:49Z",
+  "author_association": "NONE",
+  "body": "Please skip SVG fonts in webpage loaders, since Chrome/Blink is dropping support for it; I don't see any need in browsers anymore.\nInclude WOFF2 when you get a chance please, since that seems to be the new hotness ([Fx will support WOFF2](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737#c10) soonish).\n"
+}

@@ -8,59 +8,82 @@ import interfaces.GHType;
 
 public class Strings implements GHList, GHType{
 
-public List<GHString> strings;
+public List<GHString> elements;
 	
 	public Strings(){
-		this.strings = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 
 	@Override
 	public int size() {
-		return strings.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof GHString) {
-			strings.add((GHString) obj);
+			elements.add((GHString) obj);
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof GHString) {
-			if (strings.contains(obj)) {
-				strings.remove((GHString) obj);
+			if (elements.contains(obj)) {
+				elements.remove((GHString) obj);
+				return true;
 			}
 		}
+		
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
 		if (obj instanceof GHString) {
-			return strings.contains(obj);
+			return elements.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<GHString> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return strings;
-	}
-
-	public List<GHString> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return strings;
-	}
-	
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+	
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new GHString();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof GHString) {
+			elements.add(index, (GHString) element);
+			return true;
+		}
+
+		return false;
+
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Strings [strings=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+		
 	}
 
 }

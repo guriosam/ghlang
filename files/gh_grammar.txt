@@ -1,0 +1,133 @@
+C -> P
+
+P -> VarDecl BodyPart
+P -> Exp term BodyPart
+P -> Command BodyPart
+
+P -> VarDecl
+P -> Exp term
+P -> Command
+
+VarInst-> Type id
+
+Params -> VarInst
+ParamDeclListCont -> comma Params
+
+VarDecl -> Type id opAtrib Exp term
+VarDecl -> Type id opAccess Exp term
+VarDecl -> Type id term
+
+Consts -> NumConst
+Consts -> LogConst
+Consts -> StringConst
+
+Var -> id 
+Var -> id opAccess id
+Var -> id opAccess FuncAccess
+Var -> FuncAccess
+
+FuncAccess -> FuncName FuncCall
+
+FuncCall -> paramStart ListIds paramEnd
+FuncCall -> paramStart paramEnd
+
+FuncName -> fAdd
+FuncName -> fRemove
+FuncName -> fReverse
+FuncName -> fUpper
+FuncName -> fLower
+FuncName -> fLength
+FuncName -> fDiffDates
+FuncName -> fCollectData
+FuncName -> fCompare
+FuncName -> fSplit
+FuncName -> fContains
+FuncName -> fGet
+FuncName -> fPut
+
+Type -> VariableTypes
+Type -> ListTypes
+
+VariableTypes -> tInt
+VariableTypes -> tFloat
+VariableTypes -> tString
+VariableTypes -> tBool
+VariableTypes -> tCommit
+VariableTypes -> tUser
+VariableTypes -> tRepository
+VariableTypes -> tFile
+VariableTypes -> tIssue
+VariableTypes -> tPullRequest
+VariableTypes -> tComment
+VariableTypes -> tDate
+VariableTypes -> tHattoriSize
+VariableTypes -> tHattoriNature
+
+ListTypes -> tInts
+ListTypes -> tFloats
+ListTypes -> tStrings
+ListTypes -> tBools
+ListTypes -> tCommits
+ListTypes -> tUsers
+ListTypes -> tRepositories
+ListTypes -> tFiles
+ListTypes -> tIssues
+ListTypes -> tPullRequests
+ListTypes -> tComments
+ListTypes -> tDates
+
+Command -> prWrite Exp term
+Command -> prWhile Exp Body                       
+Command -> prFor ForBody Body   
+Command -> prIf Exp Body                          
+Command -> prElse Body                                            
+
+ForBody -> paramStart VarInst in id paramEnd
+
+ListIds -> Var
+ListIds -> Consts
+ListIds -> Consts comma ListIds
+ListIds -> Var comma ListIds
+
+Body -> escStart BodyPart escEnd
+
+BodyPart -> VarDecl BodyPart
+BodyPart -> VarDecl
+BodyPart -> Exp term BodyPart
+BodyPart -> Exp term
+BodyPart -> Command BodyPart
+BodyPart -> Command 
+
+Exp -> Exp opAtrib ExpOr
+Exp -> Exp opConc ExpOr
+Exp -> ExpOr
+
+ExpOr -> ExpOr opLogicOr ExpAnd
+ExpOr -> ExpAnd
+
+ExpAnd -> ExpAnd opLogicAnd ExpRel
+ExpAnd -> ExpRel
+
+ExpRel -> ExpRel opRel1 ExpAdd
+ExpRel -> ExpRel opRel2 ExpAdd
+ExpRel -> ExpRel opRel3 ExpAdd
+ExpRel -> ExpAdd
+
+ExpAdd -> ExpAdd opAritAd ExpMult
+ExpAdd -> ExpMult
+
+ExpMult -> ExpMult opAritMul ExpNeg
+ExpMult -> ExpNeg
+
+ExpNeg -> ExpNeg opNeg ExpEnd
+ExpNeg -> ExpEnd
+
+ExpEnd -> paramStart Exp paramEnd
+ExpEnd -> Consts
+ExpEnd -> Var
+
+NumConst -> tLitInt
+NumConst -> tLitFloat
+LogConst -> tLitBool
+
+StringConst -> tLitString

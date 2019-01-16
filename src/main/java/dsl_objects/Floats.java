@@ -8,59 +8,84 @@ import interfaces.GHType;
 
 public class Floats implements GHList, GHType{
 
-	public List<Float> floats;
+	public List<GHFloat> elements;
 	
 	public Floats(){
-		this.floats = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 	
 	@Override
 	public int size() {
-		return floats.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
-		if (obj instanceof Float) {
-			floats.add((Float) obj);
+	public boolean add(GHType obj) {
+		if (obj instanceof GHFloat) {
+			elements.add((GHFloat) obj);
+			return true;
 		}
+		
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
-		if (obj instanceof Float) {
-			if (floats.contains(obj)) {
-				floats.remove((Float) obj);
+	public boolean remove(GHType obj) {
+		if (obj instanceof GHFloat) {
+			if (elements.contains(obj)) {
+				elements.remove((GHFloat) obj);
+				return true;
 			}
 		}
+		
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
-		if (obj instanceof Float) {
-			return floats.contains(obj);
+		if (obj instanceof GHFloat) {
+			return elements.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<Float> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return floats;
-	}
-
-	public List<Float> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return floats;
-	}
-
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+	
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new GHFloat();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof GHFloat) {
+			elements.add(index, (GHFloat) element);
+			return true;
+		}
+
+		return false;
+
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Floats [floats=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

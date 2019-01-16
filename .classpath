@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/gh_language"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/miner"/>
+	<classpathentry kind="lib" path="libs/gh_compiler.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

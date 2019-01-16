@@ -1,0 +1,103 @@
+{
+  "sha": "224895a86501195e7a7ff3dde18e39f00b8e3d5a",
+  "node_id": "MDY6Q29tbWl0MjQ5NTM0NDg6MjI0ODk1YTg2NTAxMTk1ZTdhN2ZmM2RkZTE4ZTM5ZjAwYjhlM2Q1YQ==",
+  "commit": {
+    "author": {
+      "name": "Josh Estelle",
+      "email": "jestelle@users.noreply.github.com",
+      "date": "2018-01-11T20:30:39Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2018-01-11T20:30:39Z"
+    },
+    "message": "Merge pull request #689 from genome21/patch-1\n\nUpdate README.md with grammar changes.",
+    "tree": {
+      "sha": "f475dc9e4176fe39de37464954ce4fca3e2f632d",
+      "url": "https://api.github.com/repos/google/material-design-icons/git/trees/f475dc9e4176fe39de37464954ce4fca3e2f632d"
+    },
+    "url": "https://api.github.com/repos/google/material-design-icons/git/commits/224895a86501195e7a7ff3dde18e39f00b8e3d5a",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaV8lvCRBK7hj4Ov3rIwAAdHIIAIPcD2v9r0q41dZEJGFd36su\n/yF3thZboXWMnTBo1m6G+tKGDKVZ6uU5w5Shx/X0oYz8Q3oiOLxtE348BKNb3sz8\na8FUkfRgmfuvCzPjegyhiYdPjPXn9RrrDWlVEGgbefXbZTIVpJrQb1K5sIqV98bM\nmGaJZEZZLBwJS+nDMCtVQuhDuoZCoHLElIvjdP9wRc2Royqz2o503vndH5FbUySL\nCxHj3KCSwrQZdDhSKRaz/GEaH8ej9YUdPbj0uhTLC4FZotnDGflZH52/vOdj2qaU\n0tbmvC5AEfXjRvchDoZ1KMJ+DlnGJ9UH2CEmeFvKIIxCVU9vN0yl7gMfK1Jiu9A=\n=toOr\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree f475dc9e4176fe39de37464954ce4fca3e2f632d\nparent 7fbdfc47a52bcfe7bd414a1b2eeabb85a4ab6c49\nparent 607978485bc008d3e028a990839d3af51166a31b\nauthor Josh Estelle <jestelle@users.noreply.github.com> 1515702639 -0800\ncommitter GitHub <noreply@github.com> 1515702639 -0800\n\nMerge pull request #689 from genome21/patch-1\n\nUpdate README.md with grammar changes."
+    }
+  },
+  "url": "https://api.github.com/repos/google/material-design-icons/commits/224895a86501195e7a7ff3dde18e39f00b8e3d5a",
+  "html_url": "https://github.com/google/material-design-icons/commit/224895a86501195e7a7ff3dde18e39f00b8e3d5a",
+  "comments_url": "https://api.github.com/repos/google/material-design-icons/commits/224895a86501195e7a7ff3dde18e39f00b8e3d5a/comments",
+  "author": {
+    "login": "jestelle",
+    "id": 3145577,
+    "node_id": "MDQ6VXNlcjMxNDU1Nzc=",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/3145577?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jestelle",
+    "html_url": "https://github.com/jestelle",
+    "followers_url": "https://api.github.com/users/jestelle/followers",
+    "following_url": "https://api.github.com/users/jestelle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jestelle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jestelle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jestelle/subscriptions",
+    "organizations_url": "https://api.github.com/users/jestelle/orgs",
+    "repos_url": "https://api.github.com/users/jestelle/repos",
+    "events_url": "https://api.github.com/users/jestelle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jestelle/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "7fbdfc47a52bcfe7bd414a1b2eeabb85a4ab6c49",
+      "url": "https://api.github.com/repos/google/material-design-icons/commits/7fbdfc47a52bcfe7bd414a1b2eeabb85a4ab6c49",
+      "html_url": "https://github.com/google/material-design-icons/commit/7fbdfc47a52bcfe7bd414a1b2eeabb85a4ab6c49"
+    },
+    {
+      "sha": "607978485bc008d3e028a990839d3af51166a31b",
+      "url": "https://api.github.com/repos/google/material-design-icons/commits/607978485bc008d3e028a990839d3af51166a31b",
+      "html_url": "https://github.com/google/material-design-icons/commit/607978485bc008d3e028a990839d3af51166a31b"
+    }
+  ],
+  "stats": {
+    "total": 4,
+    "additions": 2,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "16f4729e163bd3d1afd0fd797ef7b7cc44279db7",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/google/material-design-icons/blob/224895a86501195e7a7ff3dde18e39f00b8e3d5a/README.md",
+      "raw_url": "https://github.com/google/material-design-icons/raw/224895a86501195e7a7ff3dde18e39f00b8e3d5a/README.md",
+      "contents_url": "https://api.github.com/repos/google/material-design-icons/contents/README.md?ref=224895a86501195e7a7ff3dde18e39f00b8e3d5a",
+      "patch": "@@ -1,6 +1,6 @@\n # Material design icons\n \n-Material design icons are the official [icon set](https://www.google.com/design/spec/style/icons.html#icons-system-icons) from Google that are designed under the [material design guidelines](https://material.io/guidelines/).\n+Material design icons is the official [icon set](https://www.google.com/design/spec/style/icons.html#icons-system-icons) from Google.  The icons are designed under the [material design guidelines](https://material.io/guidelines/).\n \n ### 3.0.1 Update\n \n@@ -36,5 +36,5 @@ If you wish to use the icon set with Polymer, we recommend consuming them via th\n \n ## License\n \n-We have made these icons available for you to incorporate them into your products under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt). Feel free to remix and re-share these icons and documentation in your products.\n+We have made these icons available for you to incorporate into your products under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt). Feel free to remix and re-share these icons and documentation in your products.\n We'd love attribution in your app's *about* screen, but it's not required. The only thing we ask is that you not re-sell these icons."
+    }
+  ]
+}

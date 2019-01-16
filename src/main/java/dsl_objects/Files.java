@@ -8,60 +8,84 @@ import interfaces.GHType;
 
 public class Files implements GHList, GHType{
 	
-	public List<GHFile> files;
+	public List<GHFile> elements;
 	
 	public Files(){
-		this.files = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 
 
 	@Override
 	public int size() {
-		return files.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof GHFile) {
-			files.add((GHFile) obj);
+			elements.add((GHFile) obj);
+			return true;
 		}
+		
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof GHFile) {
-			if (files.contains(obj)) {
-				files.remove((GHFile) obj);
+			if (elements.contains(obj)) {
+				elements.remove((GHFile) obj);
+				return true;
 			}
 		}
+		
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
 		if (obj instanceof GHFile) {
-			return files.contains(obj);
+			return elements.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<GHFile> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return files;
-	}
-
-	public List<GHFile> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return files;
-	}
-	
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+	
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new GHFile();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof GHFile) {
+			elements.add(index, (GHFile) element);
+			return true;
+		}
+		return false;
+	}
+
+	
+
+	@Override
+	public String toString() {
+		return "Files [files=" + elements + "]";
+	}
+
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

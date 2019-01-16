@@ -1,0 +1,23 @@
+[
+  {
+    "login": "guriosam",
+    "id": 5853733,
+    "node_id": "MDQ6VXNlcjU4NTM3MzM=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/5853733?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/guriosam",
+    "html_url": "https://github.com/guriosam",
+    "followers_url": "https://api.github.com/users/guriosam/followers",
+    "following_url": "https://api.github.com/users/guriosam/following{/other_user}",
+    "gists_url": "https://api.github.com/users/guriosam/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/guriosam/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/guriosam/subscriptions",
+    "organizations_url": "https://api.github.com/users/guriosam/orgs",
+    "repos_url": "https://api.github.com/users/guriosam/repos",
+    "events_url": "https://api.github.com/users/guriosam/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/guriosam/received_events",
+    "type": "User",
+    "site_admin": false,
+    "contributions": 3
+  }
+]

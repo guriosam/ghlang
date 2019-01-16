@@ -1,6 +1,5 @@
 package dsl_objects;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,64 +8,75 @@ import interfaces.GHType;
 
 public class Bools implements GHList, GHType {
 
-	public List<Bool> bools;
-
-	public Bools() {
-		this.bools = new ArrayList<>();
-	}
+	public List<Bool> elements = new ArrayList<>();
 
 	@Override
 	public int size() {
-		return bools.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof Bool) {
-			bools.add((Bool) obj);
-		}
-	}
-
-	@Override
-	public void remove(GHType obj) {
-		if (obj instanceof Bool) {
-			if (bools.contains(obj)) {
-				bools.remove((Bool) obj);
-			}
-		}
-	}
-
-	@Override
-	public boolean contains(GHType obj) {
-		if (obj instanceof Bool) {
-			return bools.contains(obj);
+			elements.add((Bool) obj);
+			return true;
 		}
 
 		return false;
 	}
 
-	public List<Bool> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return bools;
+	@Override
+	public boolean remove(GHType obj) {
+		if (obj instanceof Bool) {
+			if (elements.contains(obj)) {
+				elements.remove((Bool) obj);
+				return true;
+			}
+		}
+		return false;
 	}
 
-	public List<Bool> sortDesc(String field) {
+	@Override
+	public boolean contains(GHType obj) {
+		if (obj instanceof Bool) {
+			return elements.contains(obj);
+		}
 
-		// TODO Check field and sort
-
-		return bools;
+		return false;
 	}
 
 	@Override
 	public boolean compare(GHType obj1) {
-		return this.toString().equals(obj1.toString());
+		return elements.toString().equals(obj1.toString());
 	}
 
 	@Override
 	public String toString() {
-		return "Bools [bools=" + bools + "]";
+		return "Bools [bools=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+	}
+
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new Bool();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if(element instanceof Bool){
+			elements.add(index, (Bool) element);
+			return true;
+		}
+		
+		return false;
+	
 	}
 
 }

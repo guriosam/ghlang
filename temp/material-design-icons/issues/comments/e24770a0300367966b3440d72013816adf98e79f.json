@@ -1,0 +1,98 @@
+{
+  "sha": "e24770a0300367966b3440d72013816adf98e79f",
+  "node_id": "MDY6Q29tbWl0MjQ5NTM0NDg6ZTI0NzcwYTAzMDAzNjc5NjZiMzQ0MGQ3MjAxMzgxNmFkZjk4ZTc5Zg==",
+  "commit": {
+    "author": {
+      "name": "Brenton Simpson",
+      "email": "appsforartists@google.com",
+      "date": "2015-12-31T01:04:30Z"
+    },
+    "committer": {
+      "name": "Brenton Simpson",
+      "email": "appsforartists@google.com",
+      "date": "2015-12-31T01:04:30Z"
+    },
+    "message": "release v2.1.3",
+    "tree": {
+      "sha": "dc4de82394587e89581d6a6ffa5951429f1f72f1",
+      "url": "https://api.github.com/repos/google/material-design-icons/git/trees/dc4de82394587e89581d6a6ffa5951429f1f72f1"
+    },
+    "url": "https://api.github.com/repos/google/material-design-icons/git/commits/e24770a0300367966b3440d72013816adf98e79f",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null
+    }
+  },
+  "url": "https://api.github.com/repos/google/material-design-icons/commits/e24770a0300367966b3440d72013816adf98e79f",
+  "html_url": "https://github.com/google/material-design-icons/commit/e24770a0300367966b3440d72013816adf98e79f",
+  "comments_url": "https://api.github.com/repos/google/material-design-icons/commits/e24770a0300367966b3440d72013816adf98e79f/comments",
+  "author": {
+    "login": "appsforartists",
+    "id": 926648,
+    "node_id": "MDQ6VXNlcjkyNjY0OA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/926648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/appsforartists",
+    "html_url": "https://github.com/appsforartists",
+    "followers_url": "https://api.github.com/users/appsforartists/followers",
+    "following_url": "https://api.github.com/users/appsforartists/following{/other_user}",
+    "gists_url": "https://api.github.com/users/appsforartists/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/appsforartists/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/appsforartists/subscriptions",
+    "organizations_url": "https://api.github.com/users/appsforartists/orgs",
+    "repos_url": "https://api.github.com/users/appsforartists/repos",
+    "events_url": "https://api.github.com/users/appsforartists/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/appsforartists/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "appsforartists",
+    "id": 926648,
+    "node_id": "MDQ6VXNlcjkyNjY0OA==",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/926648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/appsforartists",
+    "html_url": "https://github.com/appsforartists",
+    "followers_url": "https://api.github.com/users/appsforartists/followers",
+    "following_url": "https://api.github.com/users/appsforartists/following{/other_user}",
+    "gists_url": "https://api.github.com/users/appsforartists/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/appsforartists/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/appsforartists/subscriptions",
+    "organizations_url": "https://api.github.com/users/appsforartists/orgs",
+    "repos_url": "https://api.github.com/users/appsforartists/repos",
+    "events_url": "https://api.github.com/users/appsforartists/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/appsforartists/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "4448b3023d2cb900b2664bde7dab8d9bd678faa2",
+      "url": "https://api.github.com/repos/google/material-design-icons/commits/4448b3023d2cb900b2664bde7dab8d9bd678faa2",
+      "html_url": "https://github.com/google/material-design-icons/commit/4448b3023d2cb900b2664bde7dab8d9bd678faa2"
+    }
+  ],
+  "stats": {
+    "total": 2,
+    "additions": 1,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "29bc45d47c2d55d97edb7a3d5cd6c4d17504b808",
+      "filename": "package.json",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/google/material-design-icons/blob/e24770a0300367966b3440d72013816adf98e79f/package.json",
+      "raw_url": "https://github.com/google/material-design-icons/raw/e24770a0300367966b3440d72013816adf98e79f/package.json",
+      "contents_url": "https://api.github.com/repos/google/material-design-icons/contents/package.json?ref=e24770a0300367966b3440d72013816adf98e79f",
+      "patch": "@@ -1,6 +1,6 @@\n {\n   \"name\": \"material-design-icons\",\n-  \"version\": \"2.1.2\",\n+  \"version\": \"2.1.3\",\n   \"description\": \"Material Design icons by Google\",\n   \"main\": \"index.js\",\n   \"repository\": {"
+    }
+  ]
+}

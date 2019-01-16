@@ -27,10 +27,9 @@ public class Issue implements GHType, GHTypeAPI {
 		return this.toString().equals(obj1.toString());
 	}
 
-	@Override
-	public void collectData(String[] args) {
-		// TODO Auto-generated method stub
-		
+	public Issue collectData(String path, String issueNumber) {
+
+		return this;
 	}
 
 }

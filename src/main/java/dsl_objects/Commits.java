@@ -8,58 +8,82 @@ import interfaces.GHType;
 
 public class Commits implements GHList, GHType {
 
-	public List<Commit> commits;
+	public List<Commit> elements;
 
 	public Commits() {
-		this.commits = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 
 	@Override
 	public int size() {
-		return commits.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof Commits) {
-			commits.add((Commit) obj);
+			elements.add((Commit) obj);
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof Commits) {
-			if (commits.contains(obj)) {
-				commits.remove((Commit) obj);
+			if (elements.contains(obj)) {
+				elements.remove((Commit) obj);
+				return true;
 			}
-		}
-	}
-
-	@Override
-	public boolean contains(GHType obj) {
-		if (obj instanceof Commit) {
-			return commits.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<Commit> sortAsc(String field) {
+	@Override
+	public boolean contains(GHType obj) {
+		if (obj instanceof Commit) {
+			return elements.contains(obj);
+		}
 
-		// TODO Check field and sort
-
-		return commits;
-	}
-
-	public List<Commit> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return commits;
+		return false;
 	}
 
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new Commit();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof Commit) {
+			elements.add(index, (Commit) element);
+			return true;
+		}
+
+		return false;
+
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Commits [commits=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
 	}
 }

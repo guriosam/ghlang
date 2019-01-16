@@ -8,60 +8,81 @@ import interfaces.GHType;
 
 public class Users implements GHList, GHType {
 
-	public List<User> users;
+	public List<User> elements;
 
 	public Users() {
-		this.users = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 
 	@Override
 	public int size() {
-		return users.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof User) {
-			users.add((User) obj);
+			elements.add((User) obj);
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof User) {
-			if (users.contains(obj)) {
-				users.remove((User) obj);
+			if (elements.contains(obj)) {
+				elements.remove((User) obj);
+				return true;
 			}
 		}
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
 		if (obj instanceof User) {
-			return users.contains(obj);
+			return elements.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<User> sortAsc(String field) {
-
-		switch (field) {
-
-		}
-
-		return users;
-	}
-
-	public List<User> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return users;
-	}
-
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+	
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new User();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof User) {
+			elements.add(index, (User) element);
+			return true;
+		}
+
+		return false;
+
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Users [users=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
 	}
 }

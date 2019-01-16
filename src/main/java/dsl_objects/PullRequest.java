@@ -35,9 +35,9 @@ public class PullRequest implements GHTypeAPI, GHType{
 		return this.toString().equals(obj1.toString());
 	}
 
-	@Override
-	public void collectData(String[] args) {
-		// TODO Auto-generated method stub
+	public PullRequest collectData(String path, String pullNumber) {
+
+		return this;
 		
 	}
 

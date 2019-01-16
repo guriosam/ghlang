@@ -6,60 +6,82 @@ import java.util.List;
 import interfaces.GHList;
 import interfaces.GHType;
 
-public class Repositories implements GHList, GHType{
+public class Repositories implements GHList, GHType {
 
-public List<Repository> repositories;
-	
-	public Repositories(){
-		this.repositories = new ArrayList<>();
+	public List<Repository> elements;
+
+	public Repositories() {
+		this.elements = new ArrayList<>();
 	}
 
 	@Override
 	public int size() {
-		return repositories.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof Repository) {
-			repositories.add((Repository) obj);
+			elements.add((Repository) obj);
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public void remove(GHType obj) {
+	public boolean remove(GHType obj) {
 		if (obj instanceof Repository) {
-			if (repositories.contains(obj)) {
-				repositories.remove((Repository) obj);
+			if (elements.contains(obj)) {
+				elements.remove((Repository) obj);
+				return true;
 			}
 		}
+		return false;
 	}
 
 	@Override
 	public boolean contains(GHType obj) {
 		if (obj instanceof Repository) {
-			return repositories.contains(obj);
+			return elements.contains(obj);
 		}
 
 		return false;
 	}
 
-	public List<Repository> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return repositories;
-	}
-
-	public List<Repository> sortDesc(String field) {
-
-		// TODO Check field and sort
-
-		return repositories;
-	}
-	
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
+	}
+
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new Repository();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof Repository) {
+			elements.add(index, (Repository) element);
+			return true;
+		}
+
+		return false;
+
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Repositories [repositories=" + elements + "]";
+	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
 	}
 }

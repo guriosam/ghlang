@@ -1,33 +1,63 @@
 package start;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import endpoints.CommitsAPI;
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+
 import interpreter.Interpreter;
 import utils.IO;
 
 public class Main {
 
-	public static void main(String[] args) {
+	@Parameter(names = "--code", description = "Path to the input code", order = 1)
+	private String pathCode = "";
 
-		// String file = args[0];
+	@Parameter(names = "--tokens", description = "Path to the input tokens", order = 2)
+	private String pathTokens = "";
 
-		// Going through the lexical and syntactic analyzer.
-		List<String> commands = new ArrayList<>();
-		List<String> code = new ArrayList<>();
-		
-		commands = IO.readAnyFile("temp/tokens.txt");
-		code = IO.readAnyFile("temp/code.txt");
+	@Parameter(names = "--output", description = "Path to the output folder", order = 3)
+	private String pathOut = "";
 
-		Interpreter interpretor = new Interpreter(commands, code);
-		interpretor.analyze();
+	public static void main(String[] args) throws IOException {
+
+		Main main = new Main();
+		JCommander jCommander = new JCommander(main, args);
+		main.run(jCommander);
 
 	}
 
-	public void collectCommitData(String url) {
-		String project = url.substring(url.indexOf("/"));
-		CommitsAPI.downloadAllCommits(project, url);
+	private void run(JCommander jCommander) {
+
+		try {
+
+			List<String> commands = new ArrayList<>();
+			List<String> code = new ArrayList<>();
+			
+			commands = IO.readAnyFile(pathTokens);
+			code = IO.readAnyFile(pathCode);
+
+			Interpreter interpreter = new Interpreter(commands, code);
+			interpreter.analyze();
+
+			IO.writeAnyString(pathOut + "/GHCode.java", interpreter.getOutput());
+
+			File f = new File(pathTokens);
+			f.delete();
+			File f2 = new File(pathCode);
+			f2.delete();
+
+			//String[] args = new String[1];
+			//args[0] = pathOut;
+
+			//FrameworkMain.main(args);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 }

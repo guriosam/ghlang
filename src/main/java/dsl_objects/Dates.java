@@ -8,58 +8,82 @@ import interfaces.GHType;
 
 public class Dates implements GHList, GHType {
 
-	public List<GHDate> dates;
+	public List<GHDate> elements;
 
 	public Dates() {
-		this.dates = new ArrayList<>();
+		this.elements = new ArrayList<>();
 	}
 
 	@Override
 	public int size() {
-		return dates.size();
+		return elements.size();
 	}
 
 	@Override
-	public void add(GHType obj) {
+	public boolean add(GHType obj) {
 		if (obj instanceof GHDate) {
-			dates.add((GHDate) obj);
-		}
-	}
-
-	@Override
-	public void remove(GHType obj) {
-		if (obj instanceof GHDate) {
-			if (dates.contains(obj)) {
-				dates.remove((GHDate) obj);
-			}
-		}
-	}
-
-	@Override
-	public boolean contains(GHType obj) {
-		if (obj instanceof GHDate) {
-			return dates.contains(obj);
+			elements.add((GHDate) obj);
+			return true;
 		}
 
 		return false;
 	}
 
-	public List<GHDate> sortAsc(String field) {
-
-		// TODO Check field and sort
-
-		return dates;
+	@Override
+	public boolean remove(GHType obj) {
+		if (obj instanceof GHDate) {
+			if (elements.contains(obj)) {
+				elements.remove((GHDate) obj);
+				return true;
+			}
+		}
+		return false;
 	}
 
-	public List<GHDate> sortDesc(String field) {
+	@Override
+	public boolean contains(GHType obj) {
+		if (obj instanceof GHDate) {
+			return elements.contains(obj);
+		}
 
-		// TODO Check field and sort
-
-		return dates;
+		return false;
 	}
-	
+
 	@Override
 	public boolean compare(GHType obj1) {
 		return this.toString().equals(obj1.toString());
 	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public GHType get(int position) {
+		if (elements.size() > position) {
+			return elements.get(position);
+		} else {
+			return new Bool();
+		}
+	}
+
+	@Override
+	public boolean put(int index, GHType element) {
+		if (element instanceof GHDate) {
+			elements.add(index, (GHDate) element);
+			return true;
+		}
+
+		return false;
+
+	}
+
+	@Override
+	public String toString() {
+		return "Dates [dates=" + elements + "]";
+	}
+	
+	
 }
